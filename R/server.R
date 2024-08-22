@@ -26,10 +26,10 @@ function(input, output, session) {
     }else{
       if(timespan >= 2 & timespan < 7){
         mainplot +
-          scale_x_datetime(date_breaks = "1 day", date_labels="%D")
+          scale_x_datetime(date_breaks = "1 day", date_labels="%D\n%R")
       }else{
         mainplot +
-          scale_x_datetime(date_breaks = "1 week", date_labels="%D")
+          scale_x_datetime(date_breaks = "1 week", date_labels="%D\n%R")
       }
     }
     
