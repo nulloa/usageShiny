@@ -21,7 +21,8 @@ function(input, output, session) {
       # geom_line() +
       theme_bw() +
       labs(x="Date", y=as.character(input$yvar), color="Timing", shape="Season") +
-      scale_x_date(date_breaks = "3 months", date_minor_breaks = "1 month", date_labels = "%m-%Y")
+      scale_x_date(date_breaks = "3 months", date_minor_breaks = "1 month", date_labels = "%m-%Y") +
+      facet_grid(season~.)
     
   })
   
