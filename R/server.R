@@ -36,7 +36,7 @@ function(input, output, session) {
   selectedHourlyData <- reactive({
     electricityusagedata::hourly_usage %>%
       filter(between(date, input$hourlyDateRange[1], input$hourlyDateRange[2])) %>%
-      mutate(datetime = as.POSIXct(paste(date, start.time), format="%Y-%m-%d %H:%M:%S")) 
+      mutate(datetime = as.POSIXct(paste(date, `start time`), format="%Y-%m-%d %H:%M:%S")) 
   })
   
   output$hourly_plot <- renderPlot({
